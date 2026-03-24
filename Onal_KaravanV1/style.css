@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 🔹 Showcase */
+.showcase {
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center; /* ana yazıyı ortalamak için */
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 10;
+    transition: 0.5s;
+}
+
+.showcase.active {
+    right: 300px;
+}
+
+/* 🔹 Video */
+.showcase video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+    filter: brightness(0.6);
+}
+
+/* 🔹 Header */
+.showcase header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.showcase header h2 {
+    font-size: 50px;
+    padding-right: 70px;
+    
+}
+
+.showcase header img {
+    border: solid 2px lightblue;
+    border-radius: 50%;
+}
+/* Sağ toggle menu */
+.toggle {
+    width: 60px;
+    height: 60px;
+    background: url('/Onal_Karavan/img/menu.png') no-repeat center;
+    background-size: 30px;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url('/Onal_Karavan/img/close.png') no-repeat center;
+    background-size: 25px;
+}
+
+/* 🔹 Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+}
+
+/* 🔹 Ana Yazılar */
+.text {
+    position: relative;
+    z-index: 10;
+    max-width: 900px;
+    margin-top: 250px; /* header ile ana yazı arası boşluk */
+    text-align: center; /* ortalama */
+}
+
+.text h2 {
+    font-size: 7em;
+    font-weight: 800;
+    line-height: 1em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.text h3 {
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    margin-top: 20px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.text p {
+    font-size: 1.5em;
+    margin: 30px 0;
+    font-weight: 400;
+    max-width: 900px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+.text a {
+    display: inline-block;
+    font-size: 1.2em;
+    background: #fff;
+    padding: 12px 35px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.text a:hover {
+    letter-spacing: 6px;
+}
+
+/* 🔹 Sosyal ikonlar */
+.social {
+    position: absolute;       
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 10;
+}
+
+.social li {
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    width: 50px;             
+    height: 50px;
+    transition: 0.3s;
+}
+
+.social li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;      
+}
+
+.social li a:hover {
+    transform: translateY(-5px);
+}
+
+/* 🔹 Menü */
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;   
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu ul {
+    position: relative;
+    list-style: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+    transition: 0.3s;
+}
+
+.menu ul li a:hover {
+    color: rgb(141, 87, 87);
+}
+
+/* 🔹 Responsive */
+@media(max-width: 1024px) {
+    .text h2 { font-size: 5em; }
+    .text h3 { font-size: 3.5em; }
+    .text p  { font-size: 1.3em; }
+}
+
+@media(max-width: 740px) {
+    .showcase header { padding: 40px; }
+    .text h2 { font-size: 3em; }
+    .text h3 { font-size: 2em; }
+    .text p  { font-size: 1em; }
+}
+
+@media(max-width: 360px) {
+    
+    .text h2 { font-size: 2em; }
+    .text h3 { font-size: 1.5em; }
+    .text p  { font-size: 0.9em; }
+    .text a  { font-size: 1em; padding: 8px 20px; }
+    .social li a { width: 40px; height: 40px; } 
+}
