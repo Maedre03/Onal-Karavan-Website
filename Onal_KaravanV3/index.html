@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
+<body class="home-page">
     <header class="main-header">
         <div class="container header-container">
             <a href="index.html" class="logo">
-                <img src="images/logo.png" alt="Önal Karavan Logo">
+                <img src="images/OnalKaravanLogo-BannerVersion.png" alt="Önal Karavan Logo">
             </a>
             <button class="menu-toggle" id="mobile-menu-btn" aria-label="Menüyü Aç">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
@@ -32,9 +33,11 @@
                 <ul class="nav-links">
                     <li><a href="index.html">Ana Sayfa</a></li>
                     <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="galeri.html">Projelerimiz</a></li>
-                    <li><a href="sss.html">S.S.S.</a></li>
-                    <li><a href="tel:05053507177" class="btn btn-primary" style="padding: 8px 16px;">Hemen Ara</a></li>
+                    <li><a href="hizmetlerimiz.html">Hizmetlerimiz</a></li>
+                    <li><a href="galeri.html">Galeri</a></li>
+                    <li><a href="sss.html">SSS</a></li>
+                    <li><a href="iletisim.html">İletişim</a></li>
+                    <li><a href="iletisim.html" class="btn btn-primary" style="padding: 8px 16px;">İletişime Geçin</a></li>
                 </ul>
             </nav>
         </div>
@@ -44,21 +47,20 @@
         <!-- Hero Section -->
         <section class="hero-section">
             <div class="hero-bg">
-                <img src="images/hero-bg.jpg" alt="Karavan Dönüşümü" class="hero-img">
+                <img src="images/hero-bg-new.png" alt="Luxurious Caravan Interior" class="hero-img">
                 <div class="hero-overlay"></div>
-                <!-- Triangle motif --><div class="hero-clip-path"></div>
             </div>
             <div class="container hero-content">
-                <h1>Uzman Karavan İşçiliği.<br><span class="text-accent">Ankara'nın En Hızlı Dönüşümleri.</span></h1>
-                <p class="hero-subtext mt-1">İster yola çıkmaya hazırlanan bir aile, ister sürekli hareket halinde bir işletme olun... Sizi yolculuğa en hızlı biz hazırlarız.</p>
+                <h1>Hayalinizdeki Karavanı Birlikte İnşa Edelim</h1>
                 <div class="mt-2">
-                    <a href="tel:05053507177" class="btn btn-primary" style="font-size: 1.2rem; padding: 16px 32px;">🚀 Hızlı Teklif İçin Bizi Arayın</a>
+                    <a href="tel:05053507177" class="btn btn-primary" style="font-size: 1.2rem; padding: 16px 32px;">Ara, İletişime Geç</a>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section class="services-section section-padding">
+        <!-- Services Section -->
+        <section id="hizmetlerimiz" class="services-section">
             <div class="container">
                 <div class="text-center mb-3">
                     <h2>Hizmetlerimiz</h2>
@@ -66,97 +68,123 @@
                 </div>
                 <div class="services-grid">
                     <div class="service-card">
-                        <div class="service-icon">🛠️</div>
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                        </div>
                         <h3>Komple Dönüşüm & İmalat</h3>
                         <p>Panelvanınızı hayalinizdeki karavana dönüştürüyoruz. A'dan Z'ye komple imalat ve tasarım.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">✨</div>
-                        <h3>İç Mekan Yenileme & Modernizasyon</h3>
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+                        </div>
+                        <h3>İç Mekan Yenileme</h3>
                         <p>Eski karavanınızın iç mekanını günümüz standartlarına ve estetiğine uygun olarak yeniliyoruz.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">⏱️</div>
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
                         <h3>Hızlı ve Güvenilir Tamirat</h3>
-                        <p>Yolda veya tatilde yaşadığınız arızalar için Ankara atölyemizde hızlı tamirat çözümleri.</p>
+                        <p>Yolda veya tatilde yaşadığınız arızalar için Ankara atölyemizde tam saatinde teslimat.</p>
                     </div>
                     <div class="service-card">
-                        <div class="service-icon">🔍</div>
-                        <h3>Rutin Bakım & Seyahat Öncesi Kontrol</h3>
-                        <p>Uzun yolculuklar öncesi güvenliğiniz için detaylı check-up, yalıtım, elektrik ve su tesisat bakımı.</p>
+                        <div class="service-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h3>Seyahat Öncesi Kontrol</h3>
+                        <p>Uzun yolculuklar öncesi güvenliğiniz için detaylı check-up, yalıtım, elektrik ve tesisat bakımı.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Trust & Proof Section -->
-        <section class="trust-section section-padding">
-            <div class="trust-bg-wrapper">
-                <div class="container text-center text-light">
-                    <h2 class="mb-1" style="color:var(--text-light)">Neden Bizi Seçmelisiniz?</h2>
-                    
-                    <div class="checkmarks mt-2 mb-3">
-                        <div class="checkmark-item">✓ Hız</div>
-                        <div class="checkmark-item">✓ Ustalık</div>
-                        <div class="checkmark-item">✓ Aile Dostu</div>
-                    </div>
+        <!-- Feature Banner Section -->
+        <section class="feature-banner">
+            <div class="feature-banner-img" style="background-image: url('images/feature-banner.png');"></div>
+            <div class="feature-banner-content">
+                <h2>Özel Üretim Karavan</h2>
+                <p>Önal Karavan olarak hayalinizdeki karavanı üretiyoruz. İç mekan tasarımından en ince detaylara kadar tamamen size özel çözümler sunuyoruz. Konforlu ve güvenilir yolculuklar için en kaliteli malzemeleri kullanıyoruz.</p>
+                <a href="tel:05053507177" class="btn btn-primary" style="padding: 12px 28px;">Ara, İletişime Geç &rarr;</a>
+            </div>
+        </section>
 
-                    <div class="slider-wrapper">
-                        <div class="slider-container" id="before-after-slider">
-                            <div class="slide active">
-                                <span class="slide-label before-label">ÖNCESİ</span>
-                                <img src="images/slider-before.jpg" alt="Karavan Öncesi 1" loading="lazy">
-                            </div>
-                            <div class="slide">
-                                <span class="slide-label after-label">SONRASI</span>
-                                <img src="images/slider-after.jpg" alt="Karavan Sonrası 1" loading="lazy">
-                            </div>
-                            <div class="slide">
-                                <span class="slide-label before-label">ÖNCESİ</span>
-                                <img src="images/slider-before.jpg" alt="Karavan Öncesi 2" loading="lazy">
-                            </div>
-                            <div class="slide">
-                                <span class="slide-label after-label">SONRASI</span>
-                                <img src="images/slider-after.jpg" alt="Karavan Sonrası 2" loading="lazy">
-                            </div>
-                        </div>
-                        <button class="slider-btn prev-btn" aria-label="Önceki Fotoğraf" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); z-index:10; border:none; background:rgba(255,255,255,0.3); width:40px; height:40px; border-radius:50%; cursor:pointer;">❮</button>
-                        <button class="slider-btn next-btn" aria-label="Sonraki Fotoğraf" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:10; border:none; background:rgba(255,255,255,0.3); width:40px; height:40px; border-radius:50%; cursor:pointer;">❯</button>
-                        <div class="slider-dots" style="position:absolute; bottom:15px; left:50%; transform:translateX(-50%); display:flex; gap:8px; z-index:10;">
-                            <div class="slider-dot active" style="width:10px; height:10px; background:#fff; border-radius:50%; cursor:pointer;"></div>
-                            <div class="slider-dot" style="width:10px; height:10px; background:rgba(255,255,255,0.5); border-radius:50%; cursor:pointer;"></div>
-                            <div class="slider-dot" style="width:10px; height:10px; background:rgba(255,255,255,0.5); border-radius:50%; cursor:pointer;"></div>
-                            <div class="slider-dot" style="width:10px; height:10px; background:rgba(255,255,255,0.5); border-radius:50%; cursor:pointer;"></div>
-                        </div>
-                    </div>
+        <!-- Why Us Section -->
+        <section id="neden-biz" class="why-us-section">
+            <div class="container text-center text-light">
+                <h2 class="mb-1" style="color:var(--text-light)">Neden Biz</h2>
+                
+                <div class="why-tags">
+                    <div class="why-tag">Kaliteli İşçilik</div>
+                    <div class="why-tag">Hızlı Teslimat</div>
+                    <div class="why-tag">Aile Dostu</div>
+                </div>
 
-                    <div class="reviews-section mt-3">
-                        <h3 class="mb-2" style="color:var(--text-light)">Müşteri Yorumları</h3>
-                        <div class="reviews-grid">
-                            <div class="review-card">
-                                <div class="stars">★★★★★</div>
-                                <p>"Söz verdikleri sürede teslim ettiler, işçilik muazzam."</p>
-                                <span>- Ahmet K.</span>
-                            </div>
-                            <div class="review-card">
-                                <div class="stars">★★★★★</div>
-                                <p>"Tesisat sorunumu 2 saatte çözüp beni tatile yetiştirdiler."</p>
-                                <span>- Ayşe Y.</span>
-                            </div>
+                <div class="slider-wrapper">
+                    <div class="slider-container" id="before-after-slider">
+                        <div class="slide active">
+                            <span class="slide-label before-label">ÖNCESİ</span>
+                            <img src="images/slider-before-new.png" alt="Araç Öncesi" loading="lazy">
+                        </div>
+                        <div class="slide">
+                            <span class="slide-label after-label">SONRASI</span>
+                            <img src="images/slider-after-new.png" alt="Karavan Sonrası" loading="lazy">
                         </div>
                     </div>
+                    <button class="slider-btn prev-btn" aria-label="Önceki Fotoğraf" style="position:absolute; top:50%; left:10px; transform:translateY(-50%); z-index:10;">❮</button>
+                    <button class="slider-btn next-btn" aria-label="Sonraki Fotoğraf" style="position:absolute; top:50%; right:10px; transform:translateY(-50%); z-index:10;">❯</button>
+                    <div class="slider-dots">
+                        <div class="slider-dot active"></div>
+                        <div class="slider-dot"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="musteri-yorumlari" class="testimonials-section">
+            <div class="container relative">
+                <div class="testimonials-header">
+                    <h2>Müşteri Yorumları</h2>
+                </div>
+                
+                <div class="reviews-carousel-wrapper">
+                    <button class="carousel-btn carousel-prev" id="testim-prev">❮</button>
+                    <div class="reviews-grid" id="testim-grid">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Söz verdikleri sürede teslim ettiler, işçilik muazzam."</p>
+                            <span>- Ahmet K.</span>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Tesisat sorunumu 2 saatte çözüp beni tatile yetiştirdiler."</p>
+                            <span>- Ayşe Y.</span>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Ailemle tatil yapmak için iç mekanı yenilettik. Çok başarılı."</p>
+                            <span>- Murat T.</span>
+                        </div>
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"A'dan Z'ye her detayla yakından ilgilendiler, teşekkürler."</p>
+                            <span>- Zeynep D.</span>
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" id="testim-next">❯</button>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer class="main-footer">
+    <footer id="iletisim" class="main-footer">
         <div class="container footer-container">
             <div class="footer-col brand-col">
                 <a href="index.html" class="logo footer-logo">
-                    <img src="images/logo.png" alt="Önal Karavan Logo">
+                    <img src="images/OnalKaravanLogo-BannerVersion.png" alt="Önal Karavan Logo">
                 </a>
-                <p class="mt-1">Ankara'nın En Hızlı Dönüşümleri.</p>
+                <p class="mt-1" style="color: rgba(255,255,255,0.7);">Önal Karavan olarak hayalinizdeki karavanı üretiyoruz. Konforlu ve güvenilir yolculuklar için tamamen size özel çözümler sunuyoruz.</p>
                 <div class="social-icons mt-1">
                     <a href="https://www.instagram.com/onalkaravan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -167,28 +195,17 @@
                     <a href="https://www.tiktok.com/@onalkaravan" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
                     </a>
-                    <a href="https://www.youtube.com/@%C3%B6nalkaravan" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                    </a>
                 </div>
             </div>
-            <div class="footer-col links-col">
-                <h3>Hızlı Linkler</h3>
-                <ul>
-                    <li><a href="hakkimizda.html">Hakkımızda</a></li>
-                    <li><a href="galeri.html">Projelerimiz</a></li>
-                    <li><a href="sss.html">Sıkça Sorulan Sorular</a></li>
-                </ul>
-            </div>
             <div class="footer-col contact-col">
-                <h3>İletişim</h3>
-                <p><strong>Adres:</strong> Yenikent, Fevzi Çakmak, 14. Cad. No:11, 06946 Sincan/Ankara</p>
-                <p><strong>Çalışma Saatleri:</strong> Pazartesi - Cumartesi: 08:00 - 18:30</p>
-                <a href="tel:05053507177" class="footer-tel mt-1" style="display:block; color:var(--accent-blue-light)">📞 Atölyemizi Aramak İçin Dokun</a>
+                <h3>İletişim Bilgileri</h3>
+                <p>📍 <strong>Adres:</strong> <span style="color: rgba(255,255,255,0.7);">Yenikent, Fevzi Çakmak, 14. Cad. No:11, Sincan/Ankara</span></p>
+                <p>📞 <strong>Telefon:</strong> <span style="color: rgba(255,255,255,0.7);">+90 505 350 71 77</span></p>
+                <p>✉️ <strong>E-posta:</strong> <span style="color: rgba(255,255,255,0.7);">info@onalkaravan.com</span></p>
             </div>
             <div class="footer-col map-col">
-                <div class="map-placeholder">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.515059894135!2d32.50874397638715!3d40.019278479733146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d331cbfb7247f9%3A0xa8d58f60cd1d45d2!2s%C3%96nal%20Karavan!5e0!3m2!1sen!2str!4v1776368117786!5m2!1sen!2str" width="100%" height="200" style="border:0; border-radius:var(--border-radius);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="map-placeholder" style="border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.2);">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.515059894135!2d32.50874397638715!3d40.019278479733146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d331cbfb7247f9%3A0xa8d58f60cd1d45d2!2s%C3%96nal%20Karavan!5e0!3m2!1sen!2str!4v1776368117786!5m2!1sen!2str" width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -207,4 +224,5 @@
     </a>
 
     <script src="js/main.js"></script>
+</body>
 </html>

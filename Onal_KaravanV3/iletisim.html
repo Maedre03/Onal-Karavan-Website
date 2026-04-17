@@ -3,9 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Önal Karavan hakkımızda. Ankara'nın samimi ustaları ile tanışın.">
-    <title>Hakkımızda | Önal Karavan Ankara</title>
+    <meta name="description" content="Önal Karavan iletişim bilgileri. Adres, telefon ve yol tarifi ile bize hemen ulaşın.">
+    <title>İletişim | Önal Karavan Ankara</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚐</text></svg>">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -41,45 +44,53 @@
     </header>
 
     <main>
-        <!-- About Content -->
-        <section class="about-content section-padding">
-            <div class="container">
-                <div class="about-grid">
-                    <div class="about-text">
-                        <h2 class="mb-1">Hikayemiz</h2>
-                        <p class="mb-1">Önal Karavan olarak, yılların getirdiği pratik ustalık deneyimimizi karavancılık tutkusuyla birleştirdik. Amacımız sadece bir araç teslim etmek değil; yollarda kendinizi evinizde, güvende ve özgür hissetmenizi sağlamak.</p>
-                        <p class="mb-2">Ankara atölyemizde lüks klişelerinden uzak, tamamen sizin gerçek ihtiyaçlarınıza odaklanan dürüst ve şeffaf bir çalışma prensibi benimsiyoruz. Hızlı çöküm, sağlam tesisat ve akılcı tasarımlar bizim işimiz.</p>
+        <!-- Contact Section -->
+        <section class="contact-section section-padding" style="background-color: var(--bg-offwhite)">
+            <div class="container" style="max-width: 1000px;">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; align-items: start;">
+                    <!-- Info Box -->
+                    <div style="background: var(--bg-white); padding: 2rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow);">
+                        <h2 class="mb-2">Bize Ulaşın</h2>
+                        <p class="mb-2 text-muted">Önal Karavan ekibi olarak her türlü soru, dönüşüm projesi veya fiyat bilgisi için haftanın 6 günü hizmetinizdeyiz.</p>
                         
-                        <div class="values-list mt-2">
-                            <div style="display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem;">
-                                <div style="font-size:1.8rem; color:var(--accent-blue)">🔨</div>
-                                <div>
-                                    <h4>Pratik Çözümler</h4>
-                                    <p class="subtitle" style="font-size:1rem; margin-top:5px;">Süslü kelimeler değil, asıl işe yarayan somut işçilik sunarız.</p>
-                                </div>
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: var(--bg-offwhite); padding: 1rem; border-radius: 50%; color: var(--accent-blue);">📍</div>
+                            <div>
+                                <h4 style="margin:0;">Atölye Adresi</h4>
+                                <p style="margin:0; color:var(--text-muted);">Yenikent, Fevzi Çakmak, 14. Cad. No:11<br>Sincan/Ankara</p>
                             </div>
-                            <div style="display:flex; gap:1rem; align-items:flex-start; margin-bottom:1rem;">
-                                <div style="font-size:1.8rem; color:var(--accent-blue)">🛡️</div>
-                                <div>
-                                    <h4>Şeffaf Süreç</h4>
-                                    <p class="subtitle" style="font-size:1rem; margin-top:5px;">Bütçenizi korur, gizli maliyetler çıkarmaz, sizi aileden biri gibi görürüz.</p>
-                                </div>
+                        </div>
+                        
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: var(--bg-offwhite); padding: 1rem; border-radius: 50%; color: var(--accent-blue);">📞</div>
+                            <div>
+                                <h4 style="margin:0;">Telefon & WhatsApp</h4>
+                                <p style="margin:0;"><a href="tel:05053507177" style="color:var(--text-color); text-decoration:none; font-weight:600;">+90 505 350 71 77</a></p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: var(--bg-offwhite); padding: 1rem; border-radius: 50%; color: var(--accent-blue);">📧</div>
+                            <div>
+                                <h4 style="margin:0;">E-posta</h4>
+                                <p style="margin:0; color:var(--text-muted); font-weight:600;">info@onalkaravan.com</p>
+                            </div>
+                        </div>
+
+                        <div style="margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem;">
+                            <div style="background: var(--bg-offwhite); padding: 1rem; border-radius: 50%; color: var(--accent-blue);">🕒</div>
+                            <div>
+                                <h4 style="margin:0;">Çalışma Saatleri</h4>
+                                <p style="margin:0; color:var(--text-muted);">Pazartesi - Cumartesi: 08:00 - 18:30</p>
                             </div>
                         </div>
                     </div>
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1565214975484-3cfa9e56f914?auto=format&fit=crop&w=800" alt="Karavan İç Mekan Dönüşümü" style="border-radius: var(--border-radius); box-shadow: var(--box-shadow); width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4/3;" loading="lazy">
+                    
+                    <!-- Map Box -->
+                    <div style="background: var(--bg-white); padding: 1rem; border-radius: var(--border-radius); box-shadow: var(--box-shadow); height: 100%; min-height: 400px;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3055.515059894135!2d32.50874397638715!3d40.019278479733146!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d331cbfb7247f9%3A0xa8d58f60cd1d45d2!2s%C3%96nal%20Karavan!5e0!3m2!1sen!2str!4v1776368117786!5m2!1sen!2str" width="100%" height="100%" style="border:0; border-radius: calc(var(--border-radius) - 4px);" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-            </div>
-        </section>
-
-        <!-- Closing CTA -->
-        <section class="closing-cta section-padding" style="background-color: var(--bg-offwhite); text-align: center;">
-            <div class="container">
-                <h2 class="mb-1">Çayımızı İçmeye Bekliyoruz</h2>
-                <p class="subtitle mb-2" style="max-width: 600px; margin-left: auto; margin-right: auto;">Karavan hayalleriniz mi var? Gelip atölyemizde projelerinizi konuşalım, size en uygun çözümleri birlikte üretelim.</p>
-                <a href="tel:05053507177" class="btn btn-primary" style="font-size: 1.1rem;">📞 İletişime Geçin</a>
             </div>
         </section>
     </main>
@@ -141,7 +152,6 @@
             <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.144.39-.087.159.058 1.011.477 1.184.564.173.087.289.129.332.202.043.073.043.423-.101.827z"></path>
         </svg>
     </a>
-
     <script src="js/main.js"></script>
 </body>
 </html>

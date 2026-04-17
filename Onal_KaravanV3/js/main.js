@@ -159,15 +159,22 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smart Navbar (Hide on Scroll Down, Show on Scroll Up)
+    // Smart Navbar (Hide on Scroll Down, Show on Scroll Up, Toggle blurred background)
     const header = document.querySelector('.main-header');
     let lastScrollTop = 0;
-    const navbarHeight = 80; // Match the CSS height
+    const navbarHeight = 80;
 
     if (header) {
         window.addEventListener('scroll', () => {
             let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
+            // Add or remove blurred background
+            if (scrollTop > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
             if (scrollTop > lastScrollTop && scrollTop > navbarHeight) {
                 // Scroll Down
                 header.classList.add('nav-hidden');
@@ -176,7 +183,109 @@ document.addEventListener('DOMContentLoaded', () => {
                 header.classList.remove('nav-hidden');
             }
             
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For Mobile or negative scrolling
+            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         });
+    }
+
+    // Testimonials Carousel Logic — Infinite Auto-Play
+    const testimGrid = document.getElementById('testim-grid');
+    const testimPrev = document.getElementById('testim-prev');
+    const testimNext = document.getElementById('testim-next');
+
+    if (testimGrid && testimPrev && testimNext) {
+        const originalCards = Array.from(testimGrid.querySelectorAll('.review-card'));
+        const totalOriginal = originalCards.length;
+
+        // Clone all cards and append them for seamless looping
+        originalCards.forEach(card => {
+            const clone = card.cloneNode(true);
+            testimGrid.appendChild(clone);
+        });
+
+        const allCards = testimGrid.querySelectorAll('.review-card');
+        let testimIndex = 0;
+        let testimAutoInterval;
+
+        function getCardsPerView() {
+            return window.innerWidth <= 768 ? 1 : 3;
+        }
+
+        function updateTestimCarousel(animate) {
+            const cardsPerView = getCardsPerView();
+            const gap = 32; // 2rem = 32px
+            const card = allCards[0];
+            const cardWidth = card.offsetWidth + gap;
+            const offset = -testimIndex * cardWidth;
+
+            if (animate === false) {
+                testimGrid.style.transition = 'none';
+            } else {
+                testimGrid.style.transition = 'transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            }
+            testimGrid.style.transform = `translateX(${offset}px)`;
+        }
+
+        function nextTestim() {
+            testimIndex++;
+            updateTestimCarousel(true);
+
+            // When we've scrolled past all originals, jump back seamlessly
+            if (testimIndex >= totalOriginal) {
+                setTimeout(() => {
+                    testimIndex = 0;
+                    updateTestimCarousel(false);
+                }, 620); // Wait for transition to finish
+            }
+        }
+
+        function prevTestim() {
+            if (testimIndex <= 0) {
+                // Jump to the cloned set end instantly, then animate back
+                testimIndex = totalOriginal;
+                updateTestimCarousel(false);
+                // Force reflow so the browser registers the instant jump
+                testimGrid.offsetHeight; // eslint-disable-line no-unused-expressions
+                testimIndex = totalOriginal - 1;
+                updateTestimCarousel(true);
+            } else {
+                testimIndex--;
+                updateTestimCarousel(true);
+            }
+        }
+
+        function startTestimAuto() {
+            stopTestimAuto();
+            testimAutoInterval = setInterval(nextTestim, 4000);
+        }
+
+        function stopTestimAuto() {
+            clearInterval(testimAutoInterval);
+        }
+
+        testimNext.addEventListener('click', () => {
+            stopTestimAuto();
+            nextTestim();
+            startTestimAuto();
+        });
+
+        testimPrev.addEventListener('click', () => {
+            stopTestimAuto();
+            prevTestim();
+            startTestimAuto();
+        });
+
+        // Pause on hover
+        const carouselWrapper = testimGrid.closest('.reviews-carousel-wrapper');
+        if (carouselWrapper) {
+            carouselWrapper.addEventListener('mouseenter', stopTestimAuto);
+            carouselWrapper.addEventListener('mouseleave', startTestimAuto);
+        }
+
+        // Recalculate on resize
+        window.addEventListener('resize', () => updateTestimCarousel(false));
+
+        // Initialize
+        updateTestimCarousel(false);
+        startTestimAuto();
     }
 });
