@@ -193,6 +193,51 @@ document.addEventListener('DOMContentLoaded', () => {
     const testimNext = document.getElementById('testim-next');
 
     if (testimGrid && testimPrev && testimNext) {
+        // --- GOOGLE PLACES API MOCK DATA ---
+        // FUTURE API INTEGRATION: Replace this mock array with real data fetched from Google Places API
+        const mockGoogleReviews = [
+            {
+                author_name: "Ahmet K.",
+                rating: 5,
+                text: "Söz verdikleri sürede teslim ettiler, işçilik muazzam.",
+                profile_photo_url: "https://lh3.googleusercontent.com/a/placeholder-ahmet"
+            },
+            {
+                author_name: "Ayşe Y.",
+                rating: 5,
+                text: "Tesisat sorunumu 2 saatte çözüp beni tatile yetiştirdiler.",
+                profile_photo_url: "https://lh3.googleusercontent.com/a/placeholder-ayse"
+            },
+            {
+                author_name: "Murat T.",
+                rating: 5,
+                text: "Ailemle tatil yapmak için iç mekanı yenilettik. Çok başarılı.",
+                profile_photo_url: "https://lh3.googleusercontent.com/a/placeholder-murat"
+            },
+            {
+                author_name: "Zeynep D.",
+                rating: 5,
+                text: "A'dan Z'ye her detayla yakından ilgilendiler, teşekkürler.",
+                profile_photo_url: "https://lh3.googleusercontent.com/a/placeholder-zeynep"
+            }
+        ];
+
+        // Dynamically inject reviews into the grid
+        mockGoogleReviews.forEach(review => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            
+            // Generate star rating string based on rating value
+            const starsHTML = '★'.repeat(review.rating) + '☆'.repeat(5 - review.rating);
+            
+            card.innerHTML = `
+                <div class="stars">${starsHTML}</div>
+                <p>"${review.text}"</p>
+                <span>- ${review.author_name}</span>
+            `;
+            testimGrid.appendChild(card);
+        });
+
         const originalCards = Array.from(testimGrid.querySelectorAll('.review-card'));
         const totalOriginal = originalCards.length;
 
